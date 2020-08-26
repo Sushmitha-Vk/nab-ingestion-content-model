@@ -1,0 +1,11 @@
+run.*
+.classpath
+target
+lib/
+web/
+.settings
+.DS_Store
+.project
+*.log
+*.log.*
+alf_data_dev

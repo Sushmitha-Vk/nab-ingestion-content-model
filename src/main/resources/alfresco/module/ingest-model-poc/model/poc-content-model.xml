@@ -1,0 +1,1353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model name="acme:contentmodel" 
+       xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+   <description>ACME Content Model</description>
+   <author>TEM</author>
+   <version>1.0</version>
+
+   <imports>
+      <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+      <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+   </imports>
+   
+   <namespaces>
+	  <namespace uri="http://www.acme.com/model/content/1.0" prefix="acme"/>
+   </namespaces>
+   
+   <types>
+      
+      <type name="acme:document">
+         <title>Acme Document</title>
+         <parent>cm:content</parent>
+         <properties>
+			<property name="acme:rands">
+				<title>rands</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:randt">
+				<title>randt</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:randu">
+				<title>randu</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:randv">
+				<title>randv</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:mimeType">
+				<title>MIMEType</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:encoding">
+				<title>encoding</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:type">
+				<title>type</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:category">
+				<title>category</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:isVerified">
+				<title>isVerified</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:isLegal">
+				<title>isLegal</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:tempc">
+				<title>tempc</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<multiple>true</multiple>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempa">
+				<title>tempb</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempb">
+				<title>tempb</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:customerCGID">
+				<title>customerCGID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempd">
+				<title>tempd</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<multiple>true</multiple>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:documentSrcID">
+				<title>documentSrcID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:templateID">
+				<title>templateID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:imageID">
+				<title>imageID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempe">
+				<title>tempe</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempf">
+				<title>tempf</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempg">
+				<title>tempg</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempi">
+				<title>tempi</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:temph">
+				<title>temph</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:organisationID">
+				<title>organisationID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempj">
+				<title>tempj</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempk">
+				<title>tempk</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:templ">
+				<title>templ</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempm">
+				<title>tempm</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:tempn">
+				<title>tempn</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+			
+			<property name="acme:lcDate">
+				<title>Lifecycle Date</title>
+				<type>d:date</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+			
+			<property name="acme:lcState">
+				<title>Lifecycle State</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+			
+			<property name="acme:customerName">
+				<title>CustomerName</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<multiple>true</multiple>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:amount">
+				<title>Amount</title>
+				<type>d:float</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+			
+			<property name="acme:docType">
+				<title>DocType</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:docDate">
+				<title>DocDate</title>
+				<type>d:date</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:docStatusStatus">
+				<title>DocStatusStatus</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:docStatusDate">
+				<title>DocStatusDate</title>
+				<type>d:date</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:docStatusUser">
+				<title>DocStatusUser</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+         </properties>
+      </type>
+	  
+	  <type name="acme:typea">
+         <title>typea</title>
+         <parent>acme:document</parent>
+         <properties>
+            <property name="acme:runNo">
+			   <title>RunNo</title>
+               <type>d:int</type>
+               <mandatory>false</mandatory>
+               <index enabled="true">
+                  <atomic>true</atomic>
+                  <stored>false</stored>
+                  <tokenised>false</tokenised>
+               </index>
+            </property>
+			
+			<property name="acme:randr">
+			   <title>randr</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:tempo">
+			   <title>tempo</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:tc">
+			   <title>TC</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+         </properties>
+		 
+		 <mandatory-aspects>
+			 <aspect>acme:aspecta</aspect>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>
+	  
+	  <type name="acme:typee">
+         <title>typee</title>
+         <parent>acme:document</parent>
+         <properties>
+			
+			<property name="acme:tempp">
+			   <title>tempp</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:activityType">
+			   <title>ActivityType</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="true">
+                  <atomic>true</atomic>
+                  <stored>false</stored>
+                  <tokenised>false</tokenised>
+               </index>
+            </property>
+			
+			<property name="acme:contactFName">
+			   <title>ContactFName</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:contactLName">
+			   <title>ContactLName</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:orgCustNum">
+			   <title>ORG_CUST_NUM</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:archiveDate">
+			   <title>ARCHIVE_DATE</title>
+               <type>d:date</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:archivePurgeDate">
+			   <title>ARCHIVE_PURGE_DATE</title>
+               <type>d:date</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:lastuBy">
+			   <title>LASTU_BY</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:lastuName">
+			   <title>LASTU_NAME</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:createdByLogin">
+			   <title>CREATED_BY_LOGIN</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:archiveVersion">
+			   <title>ARCHIVE_VERSION</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:assignedTo">
+			   <title>ASSIGNED_TO</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+         </properties>
+		 
+		 <mandatory-aspects>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>
+	  
+	  <type name="acme:typef">
+         <title>typef</title>
+         <parent>acme:document</parent>
+         <properties>
+            <property name="acme:tempq">
+			   <title>tempq</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:transactionType">
+			   <title>TransactionType</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:accountStatus">
+			   <title>AccountStatus</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+			   <multiple>true</multiple>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:accntStatusDate">
+			   <title>AccntStatusDate</title>
+               <type>d:date</type>
+               <mandatory>false</mandatory>
+			   <multiple>true</multiple>
+               <index enabled="false"/>
+            </property>
+			
+         </properties>
+		 
+		 <mandatory-aspects>
+			 <aspect>acme:inAspect</aspect>
+			 <aspect>acme:batchInfo</aspect>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>
+	  
+	  <type name="acme:typeg">
+         <title>typeg</title>
+         <parent>acme:document</parent>
+         <properties>
+            <property name="acme:tempr">
+			   <title>tempr</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="true">
+                  <atomic>true</atomic>
+                  <stored>false</stored>
+                  <tokenised>false</tokenised>
+               </index>
+            </property>
+
+			<property name="acme:templateVersion">
+			   <title>TemplateVersion</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:temps">
+			   <title>temps</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:docLang">
+			   <title>DocLang</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:author">
+			   <title>Author</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:approver">
+			   <title>Approver</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:insertCode">
+			   <title>InsertCode</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:tempt">
+			   <title>tempt</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:physDestination">
+			   <title>PhysDestination</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+         </properties>
+		 
+		 <mandatory-aspects>
+			 <aspect>acme:inAspect</aspect>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>
+	  
+	  <type name="acme:typeh">
+         <title>typeh</title>
+         <parent>acme:document</parent>
+         <properties>
+            <property name="acme:tempu">
+			   <title>tempu</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="true">
+                  <atomic>true</atomic>
+                  <stored>false</stored>
+                  <tokenised>false</tokenised>
+               </index>
+            </property>
+			
+			<property name="acme:tempv">
+			   <title>tempv</title>
+               <type>d:date</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:docSeqNo">
+			   <title>DocSeqNo</title>
+               <type>d:int</type>
+               <mandatory>false</mandatory>
+               <index enabled="true">
+                  <atomic>true</atomic>
+                  <stored>false</stored>
+                  <tokenised>false</tokenised>
+               </index>
+            </property>
+			
+			<property name="acme:tempw">
+			   <title>tempw</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:addrStreet">
+			   <title>Addr_Street</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+			   <multiple>true</multiple>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:addrSuburb">
+			   <title>Addr_Suburb</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+			   <multiple>true</multiple>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:addrState">
+			   <title>Addr_State</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+			   <multiple>true</multiple>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:addrPcode">
+			   <title>Addr_Pcode</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+			   <multiple>true</multiple>
+               <index enabled="false"/>
+            </property>
+
+         </properties>
+		 
+		 <mandatory-aspects>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>
+	  
+	  <type name="acme:typei">
+         <title>typei</title>
+         <parent>acme:document</parent>
+         <properties>
+            <property name="acme:tempx">
+			   <title>tempx</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="true">
+                  <atomic>true</atomic>
+                  <stored>false</stored>
+                  <tokenised>false</tokenised>
+               </index>
+            </property>
+
+         </properties>
+		 
+		 <mandatory-aspects>
+			 <aspect>acme:inBoundAspect</aspect>
+			 <aspect>acme:batchInfo</aspect>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>
+	  
+	  <type name="acme:typej">
+         <title>typej</title>
+         <parent>acme:document</parent>
+         <properties>
+            <property name="acme:tempy">
+			   <title>tempy</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:tempz">
+			   <title>tempz</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:senderRef">
+			   <title>SenderRef</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:randa">
+			   <title>randa</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:randb">
+			   <title>randb</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:corpActionEvent">
+			   <title>CorpActionEvent</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:randd">
+			   <title>randd</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:randc">
+			   <title>randc</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:bicReceiver">
+			   <title>BICreceiver</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:eventDate">
+			   <title>EventDate</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:eventType">
+			   <title>EventType</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:rande">
+			   <title>rande</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:swiftCurrency">
+			   <title>SwiftCurrency</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:origFaxNum">
+			   <title>OrigFaxNum</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:rcvdFaxNum">
+			   <title>RcvdFaxNum</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:numPages">
+			   <title>NumPages</title>
+               <type>d:int</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:emailSender">
+			   <title>EmailSender</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:emailBanker">
+			   <title>EmailBanker</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:boxID">
+			   <title>BoxID</title>
+               <type>d:int</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:scanUser">
+			   <title>ScanUser</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:faxSenderName">
+			   <title>FaxSenderName</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:batchClass">
+			   <title>BatchClass</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:randf">
+			   <title>randf</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:testKey">
+			   <title>TestKey</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:subBatchID">
+			   <title>SubBatchID</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:randg">
+			   <title>randg</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:valueDate">
+			   <title>ValueDate</title>
+               <type>d:date</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:originalDoc">
+			   <title>OriginalDoc</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:parentDocID">
+			   <title>ParentDocID</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:matchID">
+			   <title>MatchID</title>
+               <type>d:float</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:randh">
+			   <title>randh</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:clientName">
+			   <title>ClientName</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:currency">
+			   <title>Currency</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:childDocID">
+			   <title>ChildDocID</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:randk">
+			   <title>randk</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+			
+			<property name="acme:externalSeq">
+			   <title>ExternalSeq</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+
+         </properties>
+		 
+		 <mandatory-aspects>
+			 <aspect>acme:inAspect</aspect>
+			 <aspect>acme:batchInfo</aspect>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>
+	  
+	  <type name="acme:typec">
+         <title>typec</title>
+         <parent>acme:document</parent>
+         <properties>
+            <property name="acme:docCategory">
+			   <title>DocCategory</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+
+         </properties>
+		 
+		 <mandatory-aspects>
+			 <aspect>acme:aspectb</aspect>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>
+	  
+	  <type name="acme:typed">
+         <title>typed</title>
+         <parent>acme:document</parent>
+         <properties>
+            <property name="acme:origCustomerID">
+			   <title>OrigCustomerID</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="false"/>
+            </property>
+
+         </properties>
+		 
+		 <mandatory-aspects>
+			 <aspect>acme:aspectb</aspect>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>
+	  
+	  <type name="acme:typeb">
+         <title>typeb</title>
+         <parent>acme:document</parent>
+         <properties>
+            <property name="acme:randm">
+			   <title>randm</title>
+               <type>d:text</type>
+               <mandatory>false</mandatory>
+               <index enabled="true">
+                  <atomic>true</atomic>
+                  <stored>false</stored>
+                  <tokenised>false</tokenised>
+               </index>
+            </property>
+
+         </properties>
+		 
+		 <mandatory-aspects>		 
+			 <aspect>acme:aspecta</aspect>
+			 <aspect>acme:inBoundAspect</aspect>
+			 <aspect>acme:migAspect</aspect>
+		 </mandatory-aspects>
+		 
+      </type>	  
+
+   </types>
+   
+   
+   <aspects>
+   
+      <aspect name="acme:inBoundAspect">
+         <title>inBoundAspect</title>
+         <properties>
+			<property name="acme:docFormat">
+				<title>DocFormat</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:organisation">
+				<title>Organisation</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:brand">
+				<title>Brand</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:broadCategory">
+				<title>BroadCategory</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:randn">
+				<title>randn</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:channel">
+				<title>Channel</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+         </properties>
+      </aspect>
+	  
+	  <aspect name="acme:aspectb">
+         <title>aspectb</title>
+		 <parent>acme:inBoundAspect</parent>
+         <properties>
+			<property name="acme:rando">
+				<title>rando</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:obsolete">
+				<title>Obsolete</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:obsoleteDate">
+				<title>ObsoleteDate</title>
+				<type>d:date</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:specialPreservationFlag">
+				<title>SpecialPreservationFlag</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+         </properties>
+      </aspect>
+	  
+	  <aspect name="acme:inAspect">
+         <title>inAspect</title>
+		 <parent>acme:inBoundAspect</parent>
+         <properties>
+			<property name="acme:originatingSys">
+				<title>OriginatingSys</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:docDateTime">
+				<title>DocDateTime</title>
+				<type>d:date</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:sourceSystem">
+				<title>SourceSystem</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<multiple>true</multiple>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:sourceSystemID">
+				<title>SourceSystemID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<multiple>true</multiple>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:deleteFlag">
+				<title>DeleteFlag</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:docStatusTS">
+				<title>DocStatusTS</title>
+				<type>d:date</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:hardwareID">
+				<title>HardwareID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:workStationID">
+				<title>WorkStationID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:folderID">
+				<title>FolderID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+         </properties>
+      </aspect>
+	  
+	  <aspect name="acme:aspecta">
+         <title>aspecta</title>
+         <properties>
+			<property name="acme:busDate">
+				<title>BusDate</title>
+				<type>d:date</type>
+				<mandatory>false</mandatory>
+				<index enabled="true">
+				  <atomic>true</atomic>
+				  <stored>false</stored>
+				  <tokenised>false</tokenised>
+			   </index>
+			</property>
+
+			<property name="acme:randp">
+				<title>randp</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:pageNo">
+				<title>PageNo</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+         </properties>
+      </aspect>
+	  
+	  <aspect name="acme:batchInfo">
+         <title>batchInfo</title>
+         <properties>
+			<property name="acme:batchID">
+				<title>BatchID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:sequenceNo">
+				<title>SequenceNo</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+         </properties>
+      </aspect>
+	  
+	  <aspect name="acme:migAspect">
+         <title>Migration Aspect</title>
+         <properties>
+			<property name="acme:oldDocid">
+				<title>Old Doc ID</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+
+			<property name="acme:oldCreator">
+				<title>oldCreator</title>
+				<type>d:text</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>
+			
+			<property name="acme:oldCreated">
+				<title>oldCreated</title>
+				<type>d:date</type>
+				<mandatory>false</mandatory>
+				<index enabled="false"/>
+			</property>			
+         </properties>
+      </aspect>
+
+   </aspects>
+
+</model>
